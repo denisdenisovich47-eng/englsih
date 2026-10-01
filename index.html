@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Семья для меня</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #e7ece1;
+    --ink: #22362d;
+    --muted: #5c7065;
+    --gold: #b58a3a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(ellipse at 50% 0%, #f3f5ec 0%, transparent 60%),
+      var(--paper);
+    color: var(--ink);
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+    text-align: center;
+  }
+
+  /* Заголовок */
+  h1 {
+    font-family: "Marck Script", "Lora", cursive;
+    font-weight: 400;
+    font-size: clamp(3rem, 12vw, 4.75rem);
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+    color: var(--ink);
+    animation: rise 1.4s ease-out both;
+  }
+
+  /* Линия с точкой по центру */
+  .rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 2.75rem auto;
+    max-width: 14rem;
+    color: var(--gold);
+  }
+  .rule::before,
+  .rule::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.7;
+  }
+  .rule i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .rule.top { margin-top: 0; margin-bottom: 3.25rem; }
+
+  /* Строфы */
+  .stanza {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+  .stanza span {
+    display: block;
+  }
+
+  .stanza.final {
+    font-style: italic;
+    font-size: 1.25rem;
+  }
+
+  .credit {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .note {
+    margin-top: 1rem;
+    padding: 2rem 1.75rem;
+    border: 1px solid rgba(181, 138, 58, 0.55);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.35);
+    text-align: left;
+  }
+  .note h2 {
+    margin: 0 0 1rem;
+    font-family: "Marck Script", "Lora", cursive;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .note p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .note .sign {
+    margin: 1.25rem 0 0;
+    text-align: right;
+    font-family: "Marck Script", "Lora", cursive;
+    font-size: 1.5rem;
+    color: var(--muted);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    h1 { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 420px) {
+    main { padding-top: 3.5rem; }
+    .stanza { font-size: 1.05rem; }
+    .stanza.final { font-size: 1.12rem; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Семья для меня</h1>
+    <p class="credit">
+      по мотивам стихотворения «What Family Means to Me»<br>
+      Marilyn R. Barfield<br>
+      вольный перевод — Артур Филипович
+    </p>
+    <div class="rule top" aria-hidden="true"><i></i></div>
+
+    <p class="stanza">
+      <span>Семья — это больше, чем просто слова,</span>
+      <span>Она — моя жизнь, моя сила, судьба.</span>
+      <span>Она помогает мне каждый свой день</span>
+      <span>Идти за мечтой, не страшась перемен.</span>
+    </p>
+
+    <div class="rule" aria-hidden="true"><i></i></div>
+
+    <p class="stanza">
+      <span>Праздничный вечер, весёлый наш смех,</span>
+      <span>Пикник в тихом парке — счастье для всех.</span>
+      <span>У речки палатки, костёр до утра,</span>
+      <span>И мамина молитва, когда тишина.</span>
+    </p>
+
+    <div class="rule" aria-hidden="true"><i></i></div>
+
+    <p class="stanza">
+      <span>Всё это — частичка далёкого детства,</span>
+      <span>Тепло, что навеки осталось со мной.</span>
+      <span>И где бы я ни был, я всегда ощущаю:</span>
+      <span>Семья — это место, где сердцу спокойно.</span>
+    </p>
+
+    <div class="rule" aria-hidden="true"><i></i></div>
+
+    <p class="stanza">
+      <span>Любовь моих близких, забота родных</span>
+      <span>И нежность родителей — всё это в них.</span>
+      <span>И именно это мне сердце открыло:</span>
+      <span>Семья — это то, что меня сохранило.</span>
+    </p>
+
+    <div class="rule" aria-hidden="true"><i></i></div>
+
+    <!--
+      ОРИГИНАЛ (английский текст).
+      Чтобы показать оригинал рядом с переводом, вставьте его здесь
+      (с разрешения автора) в таком виде, по одной строке в <span>:
+
+      <section class="original" lang="en">
+        <h2>Original</h2>
+        <p class="stanza">
+          <span>первая строка</span>
+          <span>вторая строка</span>
+        </p>
+        <div class="rule" aria-hidden="true"><i></i></div>
+      </section>
+    -->
+
+    <aside class="note">
+      <h2>Несколько слов от переводчика</h2>
+      <p>
+        Это вольный перевод стихотворения Marilyn R. Barfield
+        «What Family Means to Me». Я не переводил слово в слово:
+        мне хотелось сохранить главное — тепло, которое мы
+        получаем в детстве.
+      </p>
+      <p>
+	Если вы дочитали до этого места, значит, вам тоже не 
+   	всё равно. Не откладывайте: позвоните родным сегодня и 
+	скажите,что вы их очень цените
+      </p>
+      <p class="sign">Артур Филипович</p>
+    </aside>
+  </main>
+</body>
+</html>
